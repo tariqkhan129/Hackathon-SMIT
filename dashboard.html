@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+            <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+<div id="nav">
+    <h3>Personal Blogging App</h3>
+    <div>
+    <a href="profie.html" id="userName">Tariq Khan</a>
+    <a href="index.html" id="logOut">LogOut</a>
+</div>
+</div>
+<h1>Dashboard</h1>
+<div class="container-fluid">
+
+<div class="row">
+<div class="col-md-12 d-flex flex-column justify-content-center align-items-center" style="height: 80vh;">
+<div class="form mt-5 rounded">
+    <div style="width: 100%;" class="mt-4 d-flex justify-content-center flex-column align-items-center">
+      
+        <div class="mb-3 col-md-10">
+            <input type="text" id="title" class="form-control" maxlength="50" minlength="5" placeholder="Title">
+          
+        </div>
+        <div class="mb-3 col-md-10">
+        <textarea  id="Description" rows="5" class="form-control" maxlength="3000" minlength="100" placeholder="What is in Your Mind"></textarea>
+        </div>
+        
+        <div style="display: flex;justify-content: center;">
+            <button id="dashboard-btn"  >Publish Blog</button>
+        </div>
+    </div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+ 
+<br><br><br>
+<hr />
+
+<div id="posts">
+         
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+        <script type="module" src="./dashboard.js"></script>
+        <script type="module" src="./logOut.js"></script>
+
+</body>
+
+</html>
+</body>
+</html>

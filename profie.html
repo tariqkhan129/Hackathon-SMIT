@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <style>
+    body{
+    background: #F3F4F6;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+#nav {
+    display: flex;
+    background-color: #7749F8;
+    justify-content: space-between;
+    padding: 10px 110px 10px 110px;
+    color: white;
+}
+#nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+}
+ h1{
+    margin-left: 105px;
+}
+  
+    .profile-container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 5px;
+      background-color:  #FFFFFF;
+    }
+    .profile-container h2 {
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+  
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .btn {
+      background-color: #7749F8;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+   
+    .profile-picture {
+      margin-bottom: 20px;
+    }
+
+    .profile-picture img {
+      width: 150px;
+      height: 150px;
+      border-radius: 15%;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+    <div id="nav">
+        <h3>Personal Blogging App</h3>
+        <a href="index.html">LogOut</a>
+    </div>
+    <h1>Profile</h1>
+  <div class="profile-container">
+    <div class="profile-picture">
+      <img src="https://c8.alamy.com/comp/2G7FT77/default-avatar-photo-placeholder-grey-profile-picture-icon-man-in-t-shirt-2G7FT77.jpg">
+      <h2>Tariq Khan</h2>
+    </div>
+    <form id="password-form">
+      <div class="form-group">
+    
+        <input type="password" id="old-password" name="oldPassword" required placeholder=" Old Password">
+      </div>
+      <div class="form-group">
+        
+        <input type="password" id="new-password" name="newPassword" required placeholder="Password">
+      </div>
+      <div class="form-group">
+        
+        <input type="password" id="repeat-password" name="repeatPassword" required placeholder="Repeat Password">
+      </div>
+      <button type="submit" class="btn" id="Update-btn">Update Password</button>
+    </form>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const passwordForm = document.getElementById("password-form");
+      const oldPasswordInput = document.getElementById("old-password");
+      const newPasswordInput = document.getElementById("new-password");
+      const repeatPasswordInput = document.getElementById("repeat-password");
+  
+      passwordForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+  
+        const oldPassword = oldPasswordInput.value;
+        const newPassword = newPasswordInput.value;
+        const repeatPassword = repeatPasswordInput.value;
+  
+        // You can implement your password change validation and submission logic here
+        if (newPassword !== repeatPassword) {
+          alert("New passwords do not match.");
+        } else {
+          // Here you would typically send the form data to the server using AJAX or fetch
+          // Simulating a successful password change for demonstration purposes
+          alert("Password changed successfully!");
+          // Clear the form inputs
+          oldPasswordInput.value = "";
+          newPasswordInput.value = "";
+          repeatPasswordInput.value = "";
+          window.location.href='./dashboard.html'
+        }
+      });
+    });
+  </script>
+</body>
+</html>
